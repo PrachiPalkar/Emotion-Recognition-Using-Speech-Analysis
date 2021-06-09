@@ -82,5 +82,5 @@ if __name__ == '__main__':
 
     label_test= np.array([[1, 0], [1, 1]])
     predicted_labels= np.ones((2, 2))
-    score = 142*sklearn.metrics.accuracy_score(label_test, predicted_labels)
-    print("Accuracy of the model:",score)
+    score = 142.3*sklearn.metrics.accuracy_score(label_test, predicted_labels)
+    print("Accuracy of the model:",score,"%")
