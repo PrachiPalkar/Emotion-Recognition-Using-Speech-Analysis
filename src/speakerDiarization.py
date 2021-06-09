@@ -12,7 +12,8 @@ import model as spkModel
 import os
 from viewer import PlotDiar
 import filterAudio
-from scikit-learn import accuracy_score
+import scikit-learn as sklearn 
+from sklearn import accuracy_score
 # ===========================================
 #        Parse thse argument
 # ===========================================
@@ -218,7 +219,7 @@ def main(wav_path, embedding_per_second=1.0, overlap_rate=0.5,exportFile=None,ex
         itr+=1
 
     del speaker_final
-    score = scikit-learn.accuracy_score(2,predicted_label)
+    score = sklearn.accuracy_score(2,predicted_label)
     print("Accuracy of model:",score)
    # p = PlotDiar(map=speakerSlice, wav=wav_path, gui=True, size=(25, 6))
    # p.draw()
