@@ -190,6 +190,7 @@ def main(wav_path, embedding_per_second=1.0, overlap_rate=0.5,exportFile=None,ex
 
             speakerSlice[spk][tid]['start'] = s
             speakerSlice[spk][tid]['stop'] = e
+    global n_speakers
     n_speakers = len(speakerSlice)
     print('N-SPeakers:',n_speakers)
     global speaker_final
