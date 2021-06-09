@@ -13,7 +13,7 @@ import os
 from viewer import PlotDiar
 import filterAudio
 #import scikit-learn as sklearn 
-from scikitlearn.metrics import accuracy_score
+from scikit-learn.metrics import accuracy_score
 # ===========================================
 #        Parse thse argument
 # ===========================================
