@@ -218,8 +218,8 @@ def main(wav_path, embedding_per_second=1.0, overlap_rate=0.5,exportFile=None,ex
         itr+=1
 
     del speaker_final
-    accuracy_score(2,predicted_label)
-    print("Accuracy of model:",accuracy_score)
+    score = scikit-learn.accuracy_score(2,predicted_label)
+    print("Accuracy of model:",score)
    # p = PlotDiar(map=speakerSlice, wav=wav_path, gui=True, size=(25, 6))
    # p.draw()
    # p.plot.show()
