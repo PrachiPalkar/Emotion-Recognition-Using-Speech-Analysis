@@ -13,7 +13,7 @@ import os
 from viewer import PlotDiar
 import filterAudio
 import sklearn 
-from sklearn import accuracy_score
+from sklearn.metrics import accuracy_score
 # ===========================================
 #        Parse thse argument
 # ===========================================
