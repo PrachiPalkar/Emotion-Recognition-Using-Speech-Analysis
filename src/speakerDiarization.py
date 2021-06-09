@@ -132,7 +132,7 @@ def load_data(path, win_length=400, sr=16000, hop_length=160, n_fft=512, embeddi
 
     return utterances_spec, intervals
 
-def main(wav_path, embedding_per_second=1.0, overlap_rate=0.5,exportFile=None,expectedSpeakers=2):
+def main(wav_path, embedding_per_second=1.0, overlap_rate=0.5,exportFile=None,expectedSpeakers=4):
 
     # gpu configuration
     toolkits.initialize_GPU(args)
