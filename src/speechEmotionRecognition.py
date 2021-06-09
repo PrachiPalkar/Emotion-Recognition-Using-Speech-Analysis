@@ -15,8 +15,10 @@ from keras.layers import Conv1D, MaxPooling1D
 from keras.models import Model
 from keras.callbacks import ModelCheckpoint
 import sys
-import librosa
+#import librosa
 import bulkDiarize as bk
+import sklearn 
+from sklearn.metrics import accuracy_score
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 model = keras.models.load_model('model/lstm_cnn_rectangular_lowdropout_trainedoncustomdata.h5')
@@ -78,3 +80,7 @@ if __name__ == '__main__':
         #csvFile.close()
     os.remove("filterTemp.wav")
 
+    label_test= np.array([[0, 1], [1, 0])
+    predicted_labels= np.ones((2, 1))
+    score = sklearn.metrics.accuracy_score(label_test, predicted_labels)
+    print("Accuracy of the model:",score)
