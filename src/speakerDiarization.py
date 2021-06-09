@@ -243,7 +243,7 @@ def diarizeAudio(inputFile,exportFile,expectedSpeakers=4):
     print("Filtering Complete")
     main("filterTemp.wav", embedding_per_second=0.6, overlap_rate=0.4,exportFile=exportFile,expectedSpeakers=expectedSpeakers)
     
-    score = sklearn.accuracy_score(2,predicted_label)
+    score = sklearn.metrics.accuracy_score(2,predicted_label)
     print("Accuracy of model:",score)
 
 
