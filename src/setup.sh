@@ -2,7 +2,7 @@ pip3 install --upgrade pip
 python3 -m pip install --upgrade setuptools
 sudo apt install libasound2-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg
 sudo apt install python3-venv
-pip3 install sklearn==0.24.2
+pip3 install scikit-learn==0.24.2
 pip3 uninstall keras-nightly
 pip3 uninstall -y tensorflow
 pip3 install librosa
