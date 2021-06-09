@@ -71,10 +71,10 @@ if __name__ == '__main__':
         with open('SER_'+subdir+'.csv', 'w') as csvFile:
             writer = csv.writer(csvFile)
             for i in range(len(filenames)):
-            for j in range(len(n_speaker)):
-                csvData = [filenames[i],'person(n_speaker[j])',predictions[i][j]]
-                print("filename:",filenames[i],",Predicted Emotion := Person",n_speaker[j],":",predictions[i][j])
-            writer.writerow(csvData)
+                      for j in range(len(n_speaker)):
+                                 csvData = [filenames[i],'person(n_speaker[j])',predictions[i][j]]
+                                 print("filename:",filenames[i],",Predicted Emotion := Person",n_speaker[j],":",predictions[i][j])
+                writer.writerow(csvData)
         csvFile.close()
     os.remove("filterTemp.wav")
 
