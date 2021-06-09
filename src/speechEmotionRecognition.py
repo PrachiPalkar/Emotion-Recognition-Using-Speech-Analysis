@@ -29,7 +29,7 @@ def predict(folder, classes, model):
     solutions = []
     filenames=[]
     for subdir in os.listdir(folder):
-        # print(subdir)
+        print(subdir)
         
         lst = []
         predictions=[]
@@ -67,7 +67,7 @@ if __name__ == '__main__':
     folder = OUTPUT_FOLDER_PATH
     for subdir in os.listdir(folder):
         predictions,filenames = predict(f'{folder}{"/"}{subdir}', classes, model)
-        # print("filename:",filenames,",Predictions:",predictions)
+        print("filename:",filenames,",Predictions:",predictions)
         with open('SER_'+subdir+'.csv', 'w') as csvFile:
             writer = csv.writer(csvFile)
             for i in range(len(filenames)):
