@@ -12,7 +12,7 @@ import model as spkModel
 import os
 from viewer import PlotDiar
 import filterAudio
-#import scikitlearn as sklearn 
+import scikit-learn as sklearn 
 from sklearn.metrics import accuracy_score
 # ===========================================
 #        Parse thse argument
@@ -169,6 +169,7 @@ def main(wav_path, embedding_per_second=1.0, overlap_rate=0.5,exportFile=None,ex
         feats += [v]
 
     feats = np.array(feats)[:,0,:].astype(float)  # [splits, embedding dim]
+    global predicted_label
     predicted_label = uisrnnModel.predict(feats, inference_args)
 
     time_spec_rate = 1000*(1.0/embedding_per_second)*(1.0-overlap_rate) # speaker embedding every ?ms
@@ -219,8 +220,6 @@ def main(wav_path, embedding_per_second=1.0, overlap_rate=0.5,exportFile=None,ex
         itr+=1
 
     del speaker_final
-    score = sklearn.metrics.accuracy_score(2,predicted_label)
-    print("Accuracy of model:",score)
    # p = PlotDiar(map=speakerSlice, wav=wav_path, gui=True, size=(25, 6))
    # p.draw()
    # p.plot.show()
@@ -243,6 +242,8 @@ def diarizeAudio(inputFile,exportFile,expectedSpeakers=4):
     filterAudio.filterWav(FILE_N,"filterTemp.wav")
     print("Filtering Complete")
     main("filterTemp.wav", embedding_per_second=0.6, overlap_rate=0.4,exportFile=exportFile,expectedSpeakers=expectedSpeakers)
+    score = sklearn.metrics.accuracy_score(2,predicted_label)
+    print("Accuracy of model:",score)
 
 
 if __name__ == '__main__':
