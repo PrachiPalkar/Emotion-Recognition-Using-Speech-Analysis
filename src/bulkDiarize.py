@@ -12,7 +12,8 @@ def diarizeFromFolder(fromFolder,toFolder):
     OUTPUT_FOLDER_PATH = toFolder
 
     InputFiles = os.listdir(INPUT_FOLDER_PATH)
-    print("All-Files:",InputFiles)
+    print("\n")
+    print("File No:",InputFiles)
     # InputFiles = ["RID36_P104694_TMI_PTM_6104694_07172019_152726_001531_5.00.wav"]
     Total_time = 0
     total_audio_seconds = 0
