@@ -234,7 +234,7 @@ def diarization_try(parentClip,t1,t2,speakernumber):
     speakerTemp = pdb.from_wav(Audio)
     speaker_final[speakernumber] += speakerTemp[t1:t2]
 
-def diarizeAudio(inputFile,exportFile,expectedSpeakers=2):
+def diarizeAudio(inputFile,exportFile,expectedSpeakers=4):
     FILE_N = inputFile
     print("Filtering:",FILE_N)
     filterAudio.filterWav(FILE_N,"filterTemp.wav")
