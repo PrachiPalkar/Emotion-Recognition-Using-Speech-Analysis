@@ -219,9 +219,9 @@ def main(wav_path, embedding_per_second=1.0, overlap_rate=0.5,exportFile=None,ex
 
     del speaker_final
 
-     p = PlotDiar(map=speakerSlice, wav=wav_path, gui=True, size=(25, 6))
-     p.draw()
-     p.plot.show()
+    p = PlotDiar(map=speakerSlice, wav=wav_path, gui=True, size=(25, 6))
+    p.draw()
+    p.plot.show()
 
 from pydub import AudioSegment as pdb
 speaker_final = None
