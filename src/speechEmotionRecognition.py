@@ -48,7 +48,7 @@ def predict(folder, classes, model):
             # print("SOL",classes[ans[0]])
             predictions.append(classes[ans[0]])
 
-        if len(predictions) < 2:
+        if len(predictions) < 1:
             predictions.append('None')    
         solutions.append(predictions)
     return solutions,filenames
