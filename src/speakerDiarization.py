@@ -12,8 +12,7 @@ import model as spkModel
 import os
 from viewer import PlotDiar
 import filterAudio
-import sklearn 
-from sklearn.metrics import accuracy_score
+
 # ===========================================
 #        Parse thse argument
 # ===========================================
@@ -242,9 +241,6 @@ def diarizeAudio(inputFile,exportFile,expectedSpeakers=4):
     filterAudio.filterWav(FILE_N,"filterTemp.wav")
     print("Filtering Complete")
     main("filterTemp.wav", embedding_per_second=0.6, overlap_rate=0.4,exportFile=exportFile,expectedSpeakers=expectedSpeakers)
-    
-    score = sklearn.metrics.accuracy_score(np.array([[0, 1], [1, 1]]), np.ones((2, 2)))
-    print("Accuracy of model:",score)
 
 
 if __name__ == '__main__':
