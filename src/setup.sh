@@ -14,6 +14,7 @@ pip3 install keras==2.3.1
 pip3 install torch==1.5.0
 pip3 install pydub==0.24.1
 pip3 install torchvision==0.6.0
+pip3 install sklearn.metrics
 chmod +x pyaudio.sh
 ./pyaudio.sh
 
