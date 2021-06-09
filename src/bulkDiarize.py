@@ -26,7 +26,7 @@ def diarizeFromFolder(fromFolder,toFolder):
 
         audioSeconds = AudioSegment.from_file(TOTAL_PATH).duration_seconds
         start = time.time()
-        diarizeAudio(TOTAL_PATH,TOTAL_OUTPUT_PATH,expectedSpeakers=2)
+        diarizeAudio(TOTAL_PATH,TOTAL_OUTPUT_PATH,expectedSpeakers=4)
         end = time.time()
 
         computeTime = end-start
