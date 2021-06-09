@@ -80,7 +80,7 @@ if __name__ == '__main__':
         #csvFile.close()
     os.remove("filterTemp.wav")
 
-    label_test= np.array([[0, 1], [1, 0])
+    label_test= np.array([[0, 1], [1, 0]])
     predicted_labels= np.ones((2, 1))
     score = sklearn.metrics.accuracy_score(label_test, predicted_labels)
     print("Accuracy of the model:",score)
