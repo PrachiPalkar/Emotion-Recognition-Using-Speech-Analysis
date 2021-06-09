@@ -74,7 +74,7 @@ if __name__ == '__main__':
                       for j in range(len(n_speaker)):
                                  csvData = [filenames[i],'person(n_speaker[j])',predictions[i][j]]
                                  print("filename:",filenames[i],",Predicted Emotion := Person",n_speaker[j],":",predictions[i][j])
-                writer.writerow(csvData)
+                      writer.writerow(csvData)
         csvFile.close()
     os.remove("filterTemp.wav")
 
