@@ -14,7 +14,6 @@ from keras.layers import Input, Flatten, Dropout, Activation
 from keras.layers import Conv1D, MaxPooling1D
 from keras.models import Model
 from keras.callbacks import ModelCheckpoint
-from speakerDiarization import n_speaker
 import sys
 import librosa
 import bulkDiarize as bk
@@ -72,9 +71,9 @@ if __name__ == '__main__':
         with open('SER_'+subdir+'.csv', 'w') as csvFile:
             writer = csv.writer(csvFile)
             for i in range(len(filenames)):
-		for j in range(len(n_speaker)):
-                  csvData = [filenames[i], 'person(n_speaker[j])',predictions[i][j]]
-                  print("filename:",filenames[i],",Predicted Emotion := Person",n_speaker[j]":",predictions[i][j])
-               writer.writerow(csvData)
+                csvData = [filenames[i], 'person01',predictions[i][0],'person02',predictions[i][1]]
+                print("filename:",filenames[i],",Predicted Emotion := Person1:",predictions[i][0],",Person2:",predictions[i][1])
+                writer.writerow(csvData)
         csvFile.close()
     os.remove("filterTemp.wav")
+
