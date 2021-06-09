@@ -12,7 +12,7 @@ import model as spkModel
 import os
 from viewer import PlotDiar
 import filterAudio
-from scikit-learn.metrics import accuracy_score
+from scikit-learn import accuracy_score
 # ===========================================
 #        Parse thse argument
 # ===========================================
