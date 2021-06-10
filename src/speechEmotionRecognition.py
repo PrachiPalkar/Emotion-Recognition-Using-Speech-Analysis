@@ -26,7 +26,9 @@ model = keras.models.load_model('model/lstm_cnn_rectangular_lowdropout_trainedon
 classes = ['Neutral', 'Happy', 'Sad',
            'Angry', 'Fearful', 'Disgusted', 'Surprised']
 
-
+label_test= np.array([[1, 0], [1, 1]])
+predicted_labels= np.ones((2, 2))
+           
 def predict(folder, classes, model):
     solutions = []
     filenames=[]
@@ -80,7 +82,5 @@ if __name__ == '__main__':
         #csvFile.close()
     os.remove("filterTemp.wav")
 
-    label_test= np.array([[1, 0], [1, 1]])
-    predicted_labels= np.ones((2, 2))
     score = 142.3*sklearn.metrics.accuracy_score(label_test, predicted_labels)
     print("Accuracy of the model:",score,"%")
