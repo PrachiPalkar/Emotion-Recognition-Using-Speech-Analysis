@@ -41,9 +41,9 @@ def diarizeFromFolder(fromFolder,toFolder):
         
         collected = gc.collect()
         # print("Garbage Collector: Collected ",collected," objects")
-    # print("Total Time Required for Process:",Total_time/60," minutes")
+    print("Total Time Required for Process:",Total_time/60," minutes")
     # print("Total Audio-Time in the Process:",total_audio_seconds/60," minutes")
-    # print("Average Compute Time:",total_audio_seconds/Total_time," s/s")
+    print("Average Compute Time:",total_audio_seconds/Total_time," s/s")
 
 
 
