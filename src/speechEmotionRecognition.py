@@ -20,7 +20,7 @@ import bulkDiarize as bk
 import sklearn 
 from sklearn.metrics import accuracy_score
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '4' 
 model = keras.models.load_model('model/lstm_cnn_rectangular_lowdropout_trainedoncustomdata.h5')
 
 classes = ['Neutral', 'Happy', 'Sad',
