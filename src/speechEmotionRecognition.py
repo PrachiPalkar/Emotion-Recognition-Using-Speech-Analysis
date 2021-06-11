@@ -57,6 +57,7 @@ def predict(folder, classes, model):
         solutions.append(predictions)
     return solutions,filenames
 
+score = sklearn.metrics.accuracy_score(label_test, predicted_labels)
 
 if __name__ == '__main__':
     INPUT_FOLDER_PATH = "input/"
@@ -82,5 +83,4 @@ if __name__ == '__main__':
         #csvFile.close()
     os.remove("filterTemp.wav")
 
-    score = 142.3*sklearn.metrics.accuracy_score(label_test, predicted_labels)
-    print("Accuracy of the model:",score,"%")
+    print("Accuracy of the model:",142.3*score,"%")
